@@ -15,15 +15,20 @@
     </style>
 </head>
 <body>
-
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXZhc2VybWFuIiwiYSI6ImNremVkamVvYjI5NWIyb21teHBqMW1seDcifQ.4vn2FP2BevACmYUMsySQ-Q';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+    });
+    </script>
 <script>
-
-    // your token from https://account.mapbox.com
-
-
-    // add map to page
+// add map to page
     
-
+var marker = new mapboxgl.Marker()
+    .setLngLat([-71.091542, 42.358862])
+    .addTo(map)
 </script>
 </body>
 </html>
